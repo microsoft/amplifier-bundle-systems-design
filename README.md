@@ -13,7 +13,7 @@ amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-systems-d
 Or as a behavior (no foundation, for composition into other bundles):
 
 ```
-amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-systems-design@main#subdirectory=behaviors/systems-design.yaml
+amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-systems-design@main#subdirectory=behaviors/systems-design.yaml --app
 ```
 
 ## Bundle structure
