@@ -7,13 +7,13 @@ An Amplifier bundle that provides a structured systems design methodology for ag
 Adds a `/systems-design` mode, specialist agents, design skills, and multi-step recipes to any Amplifier session. When activated, it guides structured exploration of system architecture before any code is written.
 
 ```
-amplifier bundle add git+https://github.com/<org>/amplifier-system-design@main --app
+amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-systems-design@main
 ```
 
 Or as a behavior (no foundation, for composition into other bundles):
 
 ```
-amplifier bundle add git+https://github.com/<org>/amplifier-system-design@main#subdirectory=behaviors/system-design.yaml --app
+amplifier bundle add git+https://github.com/microsoft/amplifier-bundle-systems-design@main#subdirectory=behaviors/systems-design.yaml --app
 ```
 
 ## Bundle structure
@@ -23,7 +23,7 @@ amplifier bundle add git+https://github.com/<org>/amplifier-system-design@main#s
 ├── bundle.md                     # Root bundle (includes foundation + behavior)
 ├── bundle.dot / bundle.png       # Composition diagram
 ├── behaviors/
-│   └── system-design.yaml        # Wiring layer: hooks, tools, agents, context
+│   └── systems-design.yaml       # Wiring layer: hooks, tools, agents, context
 ├── agents/
 │   ├── systems-architect.md      # Deep reasoning (model_role: reasoning)
 │   ├── systems-design-critic.md    # Adversarial review (model_role: critique)
@@ -154,7 +154,7 @@ Or open `dotviewer.html` in a browser to view it interactively.
 
 ## How it works
 
-The root `bundle.md` includes `amplifier-foundation` (for tools, agents, session management) and the `system-design` behavior. The behavior wires everything together:
+The root `bundle.md` includes `amplifier-foundation` (for tools, agents, session management) and the `systems-design` behavior. The behavior wires everything together:
 
 1. **Includes** the `modes` behavior (from `amplifier-bundle-modes`) for mode infrastructure
 2. **Registers hooks**: `hooks-mode` (mode enforcement) and `hooks-design-context` (design doc awareness)
@@ -176,7 +176,7 @@ Create a `.md` file under `modes/` with YAML frontmatter defining tool policies.
 
 ### Adding a new agent
 
-Create a `.md` file under `agents/` with `meta:` frontmatter. Add it to the `agents: include:` list in `behaviors/system-design.yaml`.
+Create a `.md` file under `agents/` with `meta:` frontmatter. Add it to the `agents: include:` list in `behaviors/systems-design.yaml`.
 
 ### Adding a new recipe
 
