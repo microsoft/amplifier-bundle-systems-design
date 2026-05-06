@@ -11,7 +11,7 @@
 
 ### 1.1 Bundle Identity
 
-The **Amplifier Foundation** bundle provides the authoritative implementation framework, development tooling, multi-agent coordination patterns, design intelligence, Python development expertise, shadow environment testing, and comprehensive skill library for building production-grade AI applications on the Amplifier kernel.
+The **Amplifier Foundation** bundle provides the authoritative implementation framework, development tooling, multi-agent coordination patterns, design intelligence, Python development expertise, and comprehensive skill library for building production-grade AI applications on the Amplifier kernel.
 
 ### 1.2 Component Inventory
 
@@ -21,7 +21,7 @@ The **Amplifier Foundation** bundle provides the authoritative implementation fr
 | **Agents** | 14 | Specialist subagents for targeted tasks (exploration, debugging, implementation, review) |
 | **Skills** | 25+ | Reusable process workflows (brainstorming, TDD, debugging, git operations) |
 | **Context Files** | 15+ | Behavioral directives, philosophy, and standing orders injected into agent context |
-| **Bundles** | ~8 | Sub-bundles (design-intelligence, python-dev, shadow, superpowers, routing-matrix, skills, stories) |
+| **Bundles** | 7 | Sub-bundles (design-intelligence, python-dev, amplifier-tester, browser-tester, superpowers, routing-matrix, skills) |
 | **Recipes** | Multiple | Multi-step orchestrated workflows with approval gates |
 
 ### 1.3 Dependency Tree Structure
@@ -36,7 +36,6 @@ foundation (root)
 ├── recipes-behavior (multi-step workflows)
 ├── design-intelligence (8 design agents)
 ├── python-dev (Python dev + LSP code intelligence)
-├── shadow (container-based environment testing)
 ├── superpowers (6-mode development pipeline)
 ├── routing-matrix (13-role model selection system)
 ├── skills (25+ skill library)
@@ -382,7 +381,7 @@ Foundation implements **14 specialist agents** organized by domain. Each operate
 #### **foundation:ecosystem-expert**
 - **Purpose:** Guides multi-repo development, recommends testing patterns (Testing Ladder), maintains working memory (SCRATCH.md)
 - **Trigger:** Multi-repo changes; cross-repo debugging; new modules; kernel contract changes
-- **Directives:** Guide multi-repo coordination; recommend Testing Ladder (Unit → Local Override → Shadow → CI); maintain SCRATCH.md
+- **Directives:** Guide multi-repo coordination; recommend Testing Ladder (Unit → Local Override → CI); maintain SCRATCH.md
 - **Workflow:** Understand scope → Identify affected repos → Recommend testing → Guide workflows without enforcing
 - **Exit:** Testing strategy + push order guidance provided
 
@@ -598,7 +597,7 @@ Foundation injects core behavioral contexts into every agent session:
 | `MODULAR_DESIGN_PHILOSOPHY.md` | Code as description; regenerate whole modules, not line-by-line edits | Injected into architecture work |
 | `KERNEL_PHILOSOPHY.md` | Mechanism-not-policy, small/stable kernel, clean contracts, composition | Injected into kernel decisions |
 | `LANGUAGE_PHILOSOPHY.md` | Code-graph tools first (LSP), text search fallback; compiler as code reviewer | Injected into code understanding work |
-| `ISSUE_HANDLING.md` | 7-phase workflow for issues/PRs: investigate → root cause → gate → implement → shadow test → final validation → reflect | Injected when handling bugs |
+| `ISSUE_HANDLING.md` | 7-phase workflow for issues/PRs: investigate → root cause → gate → implement → final validation → reflect | Injected when handling bugs |
 | `CONTEXT_POISONING.md` | Each concept lives in exactly ONE place; delete duplicates; retcon history | Injected during documentation work |
 | `PROBLEM_SOLVING_PHILOSOPHY.md` | Never start coding until complete picture understood; evidence before claims | Injected into debugging and analysis |
 
@@ -732,8 +731,7 @@ Foundation enables multi-step workflows via the `recipes` tool. Key recipes:
 |---|---|---|
 | `validate-bundle-repo.yaml` | Check bundle documentation freshness; auto-regenerate if stale | Structural validation only |
 | `validate-implementation.yaml` | Multi-task validation of externally-completed work | Per-task validation checks |
-| `amplifier-smoke-test.yaml` | Validate Amplifier changes in shadow environment with 100-point rubric | Scored verdict: PASS/FAIL |
-| `shadow-smoke-test.yaml` | Independent shadow validation (run after shadow-operator creates environment) | Scored verdict: PASS/FAIL |
+| `amplifier-smoke-test.yaml` | Validate Amplifier changes with 100-point rubric | Scored verdict: PASS/FAIL |
 
 ---
 
@@ -841,7 +839,7 @@ Foundation enables multi-step workflows via the `recipes` tool. Key recipes:
 **Mandatory During:**
 - Debugging → `systematic-debugging` phases
 - Code review → Two-stage review (spec → quality)
-- Multi-repo work → Foundation Ladder testing (unit → override → shadow → CI)
+- Multi-repo work → Foundation Ladder testing (unit → override → CI)
 - E2E testing → No mid-run fixes (integration-testing-discipline)
 
 **Mandatory After:**
