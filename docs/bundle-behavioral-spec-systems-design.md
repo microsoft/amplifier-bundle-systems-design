@@ -32,7 +32,7 @@
 - amplifier-core (for kernel contracts)
 
 **23-component transitive closure** (alphabetical):
-amplifier-core, amplifier-expert-behavior, amplifier-foundation, behavior-agents, behavior-apply-patch, behavior-logging, behavior-modes, behavior-python-lsp, behavior-redaction, behavior-sessions, behavior-status-context, behavior-streaming-ui, behavior-todo-reminder, browser-testing-behavior, core-expert-behavior, design-intelligence-behavior, foundation-expert-behavior, hook-shell-behavior, lsp-python, mcp-behavior, python-dev, python-dev-behavior, recipes-behavior, routing-matrix, shadow, skills-behavior, systems-design, systems-design-behavior
+amplifier-core, amplifier-expert-behavior, amplifier-foundation, behavior-agents, behavior-apply-patch, behavior-logging, behavior-modes, behavior-python-lsp, behavior-redaction, behavior-sessions, behavior-status-context, behavior-streaming-ui, behavior-todo-reminder, browser-testing-behavior, core-expert-behavior, design-intelligence-behavior, foundation-expert-behavior, hook-shell-behavior, lsp-python, mcp-behavior, python-dev, python-dev-behavior, recipes-behavior, routing-matrix, skills-behavior, systems-design, systems-design-behavior
 
 ---
 
