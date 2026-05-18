@@ -50,8 +50,14 @@ agents:
 
 context:
   include:
+    # Always-on standing order: tells the LLM when to suggest /systems-design
+    # or /systems-design-review. Detection logic only — methodology, frameworks,
+    # and output templates load via mode bodies on activation.
     - systems-design:context/instructions.md
-    - systems-design:context/system-design-principles.md
-    - systems-design:context/tradeoff-frame.md
-    - systems-design:context/adversarial-perspectives.md
-    - systems-design:context/structured-design-template.md
+    # Mode-gated (loaded by modes/systems-design.md and modes/systems-design-review.md
+    # via @-mention when active):
+    #   - systems-design:context/system-design-principles.md
+    #   - systems-design:context/tradeoff-frame.md
+    #   - systems-design:context/adversarial-perspectives.md
+    #   - systems-design:context/structured-design-template.md
+    #   - systems-design:context/design-review-questions.md
