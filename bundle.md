@@ -1,7 +1,7 @@
 ---
 bundle:
   name: systems-design
-  version: 0.2.0
+  version: 0.2.1
   description: Systems design methodology for agentic development — structured design output with tradeoff analysis, multiscale reasoning, and failure mode coverage.
 
 includes:
