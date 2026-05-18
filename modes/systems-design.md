@@ -89,3 +89,5 @@ they wouldn't have activated a mode. Follow the methodology.
 @systems-design:context/system-design-principles.md
 
 @systems-design:context/design-review-questions.md
+
+@systems-design:context/structured-design-template.md
